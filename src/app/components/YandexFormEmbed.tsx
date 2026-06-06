@@ -19,7 +19,7 @@ export default function YandexFormEmbed() {
       src={FORM_SRC}
       name={FORM_NAME}
       title="Анкета подтверждения присутствия"
-      className="mx-auto h-full w-full max-w-[650px] border-0"
+      className="mx-auto block min-h-[480px] w-full max-w-[650px] border-0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     />
   );

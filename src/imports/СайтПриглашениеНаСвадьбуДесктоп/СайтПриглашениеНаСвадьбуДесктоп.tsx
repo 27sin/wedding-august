@@ -170,7 +170,7 @@ export default function СайтПриглашениеНаСвадьбуДеск
           <p className="text-[#4b4d4d] text-lg mb-8">
             Заполните, пожалуйста, анкету и подтвердите свое присутствие до 30 июня 2026 года
           </p>
-          <div className="h-[520px] overflow-hidden rounded-xl border-2 border-[rgba(82,88,52,0.1)] bg-white p-4">
+          <div className="h-[520px] overflow-y-auto rounded-xl border-2 border-[rgba(82,88,52,0.1)] bg-white p-4">
             <YandexFormEmbed />
           </div>
         </div>
