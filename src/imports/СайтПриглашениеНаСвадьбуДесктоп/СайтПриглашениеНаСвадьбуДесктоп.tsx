@@ -1,46 +1,29 @@
 import Countdown from "../../app/components/Countdown";
+import DressCodeSlider from "../../app/components/DressCodeSlider";
+import WelcomeSection from "../../app/components/WelcomeSection";
+import YandexFormEmbed from "../../app/components/YandexFormEmbed";
+import { dressCodeImages } from "../../app/dressCodeImages";
 import HeroSection from "./Section";
-import imgImage14 from "./9450b4cf47f57ad9e8dcb2c3b4733bf49d484dd0.png";
-import imgImage15 from "./ea9df5d7de15715892da72c92fbc050e4494db8f.png";
-import imgImage16 from "./c4ebebac2415c6a50c2f5a83de9687bde97fa7d7.png";
-import imgImage17 from "./a2a724a93d0059b98f3bbd769ecebd92a84587b8.png";
 
 export default function СайтПриглашениеНаСвадьбуДесктоп() {
-  const weddingDate = new Date('2026-08-29T16:00:00');
+  const weddingDate = new Date('2026-08-29T15:00:00');
 
   return (
-    <div className="bg-white min-h-screen w-full">
+    <div className="bg-[#FAFBF9] min-h-screen w-full">
       {/* Hero Section - Ticket Style */}
-      <section className="h-[400px] relative shrink-0 w-full">
+      <section className="relative h-[400px] w-full shrink-0 overflow-visible">
         <HeroSection />
       </section>
 
-      {/* Welcome Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-[#525834] text-4xl font-['Playfair_Display'] font-medium mb-8">
-            Дорогие друзья!
-          </h2>
-          <div className="text-[#4b4d4d] text-lg leading-relaxed space-y-4">
-            <p>
-              С огромной радостью и трепетом в сердцах мы приглашаем вас присоединиться
-              к значимому для нас событию — дню нашей свадьбы!
-            </p>
-            <p>
-              Этот день станет началом новой главы в нашей совместной истории,
-              мы будем безмерно счастливы, если вы разделите с нами эти радостные моменты.
-            </p>
-          </div>
-        </div>
-      </section>
+      <WelcomeSection variant="desktop" />
 
       {/* Venue Section */}
-      <section className="bg-white py-20 px-4">
+      <section className="bg-[#FAFBF9] py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-[#525834] text-4xl font-['Playfair_Display'] font-medium text-center mb-12">
             Место проведения торжества
           </h2>
-          <div className="bg-[rgba(180,197,165,0.05)] rounded-xl border-2 border-[rgba(82,88,52,0.1)] p-12">
+          <div className="bg-white rounded-xl border-2 border-[rgba(82,88,52,0.1)] p-12">
             <div className="flex gap-4 mb-8">
               <div className="mt-1">
                 <svg className="w-6 h-6 text-[#525834]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -76,15 +59,15 @@ export default function СайтПриглашениеНаСвадьбуДеск
       </section>
 
       {/* Program Section */}
-      <section className="bg-white py-20 px-4">
+      <section className="bg-[#FAFBF9] py-20 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-[#525834] text-4xl font-['Playfair_Display'] font-medium text-center mb-12">
             Программа дня
           </h2>
           <div className="space-y-14">
             {[
-              { time: "16:00", title: "Сбор гостей", desc: "Приветственные напитки и фотосессия" },
-              { time: "16:30", title: "Церемония", desc: "Самый трогательный момент" },
+              { time: "15:00", title: "Сбор гостей", desc: "Приветственные напитки и фотосессия" },
+              { time: "16:00", title: "Церемония", desc: "Самый трогательный момент" },
               { time: "17:00", title: "Банкет", desc: "Праздничный ужин, поздравления и развлечения" },
               { time: "23:00", title: "Завершение вечера", desc: "Финальный аккорд прекрасного дня" },
             ].map((item, i) => (
@@ -103,7 +86,7 @@ export default function СайтПриглашениеНаСвадьбуДеск
       </section>
 
       {/* Dress Code Section */}
-      <section className="bg-white py-20 px-4">
+      <section className="bg-[#FAFBF9] py-20 px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-[#525834] text-4xl font-['Playfair_Display'] font-medium text-center mb-8">
             Дресс-код
@@ -137,12 +120,7 @@ export default function СайтПриглашениеНаСвадьбуДеск
           <h3 className="text-[#525834] text-xl font-semibold text-center mb-8">
             Образы для вдохновения
           </h3>
-          <div className="grid grid-cols-2 gap-4">
-            <img src={imgImage14} alt="Образ 1" className="rounded-lg shadow-lg w-full h-full object-cover" />
-            <img src={imgImage15} alt="Образ 2" className="rounded-lg shadow-lg w-full h-full object-cover" />
-            <img src={imgImage16} alt="Образ 3" className="rounded-lg shadow-lg w-full h-full object-cover" />
-            <img src={imgImage17} alt="Образ 4" className="rounded-lg shadow-lg w-full h-full object-cover" />
-          </div>
+          <DressCodeSlider images={dressCodeImages} />
         </div>
       </section>
 
@@ -184,27 +162,22 @@ export default function СайтПриглашениеНаСвадьбуДеск
       </section>
 
       {/* RSVP Section */}
-      <section className="bg-white py-20 px-4">
+      <section className="bg-[#FAFBF9] py-20 px-4">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-[#525834] text-4xl font-['Playfair_Display'] font-medium mb-8">
             Подтверждение присутствия
           </h2>
           <p className="text-[#4b4d4d] text-lg mb-8">
-            Пожалуйста, подтвердите своё присутствие до 1 мая 2026 года
+            Заполните, пожалуйста, анкету и подтвердите свое присутствие до 30 июня 2026 года
           </p>
-          <div className="bg-[rgba(203,225,183,0.05)] rounded-xl border-2 border-[rgba(82,88,52,0.1)] p-8">
-            <p className="text-[#525834] mb-6">
-              Заполните анкету, чтобы мы могли лучше подготовиться к вашему приходу
-            </p>
-            <button className="bg-[#525834] text-white rounded-lg px-8 py-4 text-lg hover:bg-[#525834]/90 transition">
-              Заполнить анкету
-            </button>
+          <div className="h-[520px] overflow-hidden rounded-xl border-2 border-[rgba(82,88,52,0.1)] bg-white p-4">
+            <YandexFormEmbed />
           </div>
         </div>
       </section>
 
       {/* Chat Section */}
-      <section className="bg-white py-20 px-4">
+      <section className="bg-[#FAFBF9] py-20 px-4">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-[#525834] text-4xl font-['Playfair_Display'] font-medium mb-8">
             Чат для гостей
@@ -213,17 +186,22 @@ export default function СайтПриглашениеНаСвадьбуДеск
             Для вашего удобства мы создали чат в Telegram, куда можно будет добавлять фото и видео со свадьбы.<br />
             Давайте поделимся друг с другом счастливыми моментами этого важного дня и будем на связи!
           </p>
-          <button className="border border-[#525834] text-[#525834] rounded-lg px-8 py-4 text-lg hover:bg-[#525834] hover:text-white transition inline-flex items-center gap-3">
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <a
+            href="https://t.me/+cwiV4hQiULZiZWVi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 rounded-lg border border-[#525834] px-8 py-4 text-lg text-[#525834] transition hover:bg-[#525834] hover:text-white"
+          >
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
             </svg>
             Вступить в чат
-          </button>
+          </a>
         </div>
       </section>
 
       {/* Countdown Section */}
-      <section className="bg-white py-20 px-4">
+      <section className="bg-[#FAFBF9] py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-[#525834] text-lg mb-4">До начала торжества</p>
           <Countdown
